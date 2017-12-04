@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<h1>Survey Form!!!</h1>
+		<form action='/survey/' method="POST">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<p><label for="name">Your Name: </label><input type="text" name="survey[name]"></p>
+			<p>
+				<label for="location">Dojo Location</label>
+				<select name='survey[dojo_location]'>
+					<option selected value="Seattle">Seattle</option>
+					<option value="San Jose">San Jose</option>
+					<option value="Burbank">Burbank</option>
+					<option value="Chicago">Chicago</option>
+					<option value="Dallas">Dallas</option>
+					<option value="Tulsa">Tulsa</option>
+					<option value="Washington D.C.">Washington D.C.</option>
+				</select>
+			</p>
+			<p>
+				<label for="language">Favorite Language</label>
+				<select name='survey[favorite_language]'>
+					<option selected value="Python">Python</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="C#">C#</option>
+					<option value="Ruby">Ruby</option>
+					<option value="C++">C++</option>
+				</select>
+			</p>
+			<p><label for="comment">Comment (optional): </label><textarea name="survey[comment]" rows="4" cols="30"></textarea></p>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

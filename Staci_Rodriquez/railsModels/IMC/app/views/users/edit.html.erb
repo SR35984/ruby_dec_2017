@@ -1,0 +1,12 @@
+<html>
+	<title>Edit User</title>
+	<body>
+		<h1>Edit User!!!</h1>
+		<form action="/users/edit/" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<label>Name:</label>
+			<input type="text" name="user[name]" value="<%= @name %>" />
+			<input type="submit" value="Edit User" />
+		</form>
+	</body>
+</html>

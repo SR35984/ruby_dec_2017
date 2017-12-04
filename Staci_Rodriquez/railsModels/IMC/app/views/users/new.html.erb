@@ -1,0 +1,12 @@
+<html>
+	<title>Users</title>
+	<body>
+		<h1>Add New User!!!</h1>
+		<form action='/users/create/' method='post'>
+			<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+			<label>Name:</label>
+			<input type='text' name='user[name]' placeholder='name' />
+			<input type='submit' value='Add User' />
+		</form>
+	</body>
+</html>
